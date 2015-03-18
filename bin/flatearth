@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+var chalk = require('chalk')
+var fe = require('../index.js')(process.cwd()).run(function(err) {
+  if (err) return console.error(chalk.red(err.message))
+  console.log(chalk.green('The earth is flat.'))
+})
